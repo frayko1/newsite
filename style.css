@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	animation: transitionIn 0.75s;
+	/*background-color: rgba(3, 3, 3, 0.98);*/
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0.1;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+header {
+	padding: 13px;
+	background-color: transparent;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: 0.6s;
+}
+
+header.sticky {
+	padding: 8px 2px;
+	background-color: #141414;
+}
+
+/*header.sticky h1 {
+	color: black;
+}
+
+header.sticky p {
+	color: black;
+}
+
+header.sticky ul li a {
+	color: black;
+}*/
+
+header .container {
+	margin: 0px auto;
+	max-width: 70%;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	/*position: fixed;
+	top: 0;
+	width: 70%;
+	transition: 0.6s;*/
+}
+
+
+
+nav ul li {
+	display: inline-flex;
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	margin-right: 25px;
+	transition: 0.3s;
+}
+nav ul li a:hover {
+	color: rgba(219, 166, 46, 0.94);
+}
+
+nav ul li a.complete:last-child {
+	margin-right: 0px;
+}
+
+nav h1 {
+	font-size: 30px;
+}
+
+.main {
+	background-image: url('img/bg.jpeg');
+	background-repeat: no-repeat;
+	height: 100vh;
+	background-size: cover;
+	background-position:center;
+}
+
+.blackout {
+	background: linear-gradient(180deg,rgba(8,8,8,0) 80.25%,#080808 100%),rgba(8,8,8,.8);
+	height: 100%;
+}
+
+.main-info {
+	color: white;
+	display: flex;
+	align-items: center;
+	/*justify-content: center;
+	text-align: center;*/
+	height: 100%;
+	max-width: 70%;
+	margin: 0px auto;
+}
+
+.main-info h1 {
+	font-size: 55px;
+	margin-bottom: 15px;
+}
+
+.main-info p {
+	margin-bottom: 25px;
+}
+
+.btn-main {
+	background-color: rgba(219, 166, 46, 0.94);
+	color: black;
+	border-radius: 10px;
+	padding: 15px 30px;
+	border: none;
+	cursor: pointer;
+	transition-duration: .3s;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/*.btn-main:hover {
+	background-color: black;
+	color: white;
+}*/
+
+.services {
+	background-color: rgba(3, 3, 3, 0.98);
+	color: white;
+	padding-bottom: 100px;
+	padding-top: 40px;
+}
+
+.delivery {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+}
+
+.delivery .card {
+	width: 280px;
+	border: 1px solid grey;
+	border-radius: 9px;
+	background-color: #222222;
+}
+
+.delivery .card .title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+}
+
+.delivery .card h2 {
+	text-align: center;
+	font-size: 22px;
+}
+
+.delivery .card img {
+	width: 225px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 9px;
+	margin: 0px auto;
+}
+
+.delivery .prices {
+	background-color: #141414;
+	padding: 15px;
+	border-bottom-right-radius: 9px;
+	border-bottom-left-radius: 9px;
+	text-align: center;
+}
+
+.selected {
+	color: rgba(219, 166, 46, 0.94);
+}
+
+.advantages .container h1 {
+	margin-top: 70px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.advantages__services {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 35px;
+}
+
+.services .container {
+	max-width: 85%;
+	margin: 0px auto;
+}
+
+.advantages__services .card {
+	width: 300px;
+	height: 225px;
+	padding: 20px 20px;
+	background-color: #222;
+	border-radius: 8px;
+
+	transition: 0.3s;
+}
+
+.advantages__services .card:hover {
+	background: chocolate;
+}
+
+.advantages__services .card:hover .content {
+	transform: scale(1.07);
+}
+
+.advantages__services .card:nth-child(2) {
+	padding: 32px 32px;
+}
+/*.advantages__services .card:nth-child(6) {
+	padding: 32px 32px;
+}*/
+
+.advantages__services .card .content {
+	text-align: center;
+	padding: 15p 15px;
+	transition: 0.3s;
+}
+
+.advantages__services .card .content h2 {
+	font-size: 20px;
+}
+
+
+.form {
+	background-color: rgba(3, 3, 3, 0.94);
+}
+
+@media(max-width: 1875px){
+	.services .container {
+		max-width: 92%;
+	}
+}
+@media(max-width: 1560px){
+	.services .container {
+		max-width: 95%;
+	}
+}
